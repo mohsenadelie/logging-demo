@@ -1,0 +1,13 @@
+<configuration scan="true" scanPeriod="150 seconds">
+    <appender name="ggg" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="fatal">
+        <appender-ref ref="ggg" />
+    </root>
+    <logger level="fatal" name="com.example.Main">
+        <appender-ref ref="ggg" />
+    </logger>
+</configuration>
